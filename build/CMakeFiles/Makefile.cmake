@@ -18,6 +18,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/ubuntu/catkin_ws/src/CMakeLists.txt"
   "/home/ubuntu/catkin_ws/src/beginner_tutorials/CMakeLists.txt"
   "/home/ubuntu/catkin_ws/src/beginner_tutorials/package.xml"
+  "/home/ubuntu/catkin_ws/src/beginner_tutorials/scripts/listener.py"
+  "/home/ubuntu/catkin_ws/src/beginner_tutorials/scripts/talker.py"
   "/opt/ros/kinetic/share/catkin/cmake/../package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/all.cmake"
   "/opt/ros/kinetic/share/catkin/cmake/assert.cmake"
