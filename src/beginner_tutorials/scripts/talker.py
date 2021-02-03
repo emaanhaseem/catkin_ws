@@ -36,19 +36,30 @@
 ## Simple talker demo that published std_msgs/Strings messages
 ## to the 'chatter' topic
 
-import rospy
-from std_msgs.msg import String
+import rospy                    # writing a ROS node
+from std_msgs.msg import String # publishing
 
 def talker():
+    # declares that your node is publishing to the chatter 
+    # topic using the message type String
     pub = rospy.Publisher('chatter', String, queue_size=10)
+
+    # In this case, your node will take on the name talker
     rospy.init_node('talker', anonymous=True)
+
+    # loop 10 times per second
     rate = rospy.Rate(10) # 10hz
+
+    # while (not Ctrl-C called)
     while not rospy.is_shutdown():
         hello_str = "hello world %s" % rospy.get_time()
         rospy.loginfo(hello_str)
+        # publishes a string to our chatter topic
         pub.publish(hello_str)
         rate.sleep()
 
+# The reason this exception is raised is so that you 
+# don't accidentally continue executing code after the sleep().
 if __name__ == '__main__':
     try:
         talker()
